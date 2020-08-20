@@ -1,0 +1,22 @@
+.demo .notificationsFrame .header {
+    background: rgba(251, 202, 43, 1);
+}
+
+.demo .notificationsFrame .header .searchIcon,
+.demo .notificationsFrame .header .title {
+    color: #333;
+}
+
+.demo .notificationsFrame .header .menuIcon .dashTop,
+.demo .notificationsFrame .header .menuIcon .dashBottom,
+.demo .notificationsFrame .header .menuIcon .circle {
+    background-color: #333;
+}
+
+.notificationsFrame {
+    background-color: #282c34;
+    color: #333;
+    /* padding: 40px;
+    font-family: Arial;
+    text-align: center; */
+}

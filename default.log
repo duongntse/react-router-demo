@@ -1,0 +1,15 @@
+2020.08.19, 12:32:56.0043 UTC -> NODE_ENV: development
+2020.08.19, 12:32:56.0049 UTC -> allVars:
+2020.08.19, 12:32:56.0049 UTC -> {"NODE_ENV":"development","APP_NAME":"30days","TIME_SERVER":"https://fullstacktime.herokuapp.com","REACT_APP_TIME_SERVER":"https://fullstacktime.herokuapp.com"}
+2020.08.19, 12:32:58.0003 UTC -> [object Object]
+2020.08.19, 12:32:58.0003 UTC -> webpack.config.js: env.stringified
+2020.08.19, 12:34:39.0133 UTC -> NODE_ENV: development
+2020.08.19, 12:34:39.0141 UTC -> allVars:
+2020.08.19, 12:34:39.0141 UTC -> {"NODE_ENV":"development","APP_NAME":"30days","TIME_SERVER":"https://fullstacktime.herokuapp.com","REACT_APP_TIME_SERVER":"https://fullstacktime.herokuapp.com"}
+2020.08.19, 12:34:41.0168 UTC -> [object Object]
+2020.08.19, 12:34:41.0168 UTC -> webpack.config.js: env.stringified
+2020.08.20, 13:20:44.0431 UTC -> NODE_ENV: production
+2020.08.20, 13:20:44.0813 UTC -> allVars:
+2020.08.20, 13:20:44.0813 UTC -> {"NODE_ENV":"production","APP_NAME":"30days","TIME_SERVER":"https://fullstacktime.herokuapp.com"}
+2020.08.20, 13:21:58.0238 UTC -> webpack.config.js: env.stringified
+2020.08.20, 13:21:58.0238 UTC -> [object Object]
