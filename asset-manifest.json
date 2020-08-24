@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/duongntse/react-router-demo/static/css/main.2b0f36ae.chunk.css",
+    "main.js": "/duongntse/react-router-demo/static/js/main.468b34e5.chunk.js",
+    "main.js.map": "/duongntse/react-router-demo/static/js/main.468b34e5.chunk.js.map",
+    "runtime-main.js": "/duongntse/react-router-demo/static/js/runtime-main.254adbab.js",
+    "runtime-main.js.map": "/duongntse/react-router-demo/static/js/runtime-main.254adbab.js.map",
+    "static/js/2.5f80ad8c.chunk.js": "/duongntse/react-router-demo/static/js/2.5f80ad8c.chunk.js",
+    "static/js/2.5f80ad8c.chunk.js.map": "/duongntse/react-router-demo/static/js/2.5f80ad8c.chunk.js.map",
+    "index.html": "/duongntse/react-router-demo/index.html",
+    "precache-manifest.5d18f09527a9993dba0ca0a943096535.js": "/duongntse/react-router-demo/precache-manifest.5d18f09527a9993dba0ca0a943096535.js",
+    "service-worker.js": "/duongntse/react-router-demo/service-worker.js",
+    "static/css/main.2b0f36ae.chunk.css.map": "/duongntse/react-router-demo/static/css/main.2b0f36ae.chunk.css.map",
+    "static/js/2.5f80ad8c.chunk.js.LICENSE.txt": "/duongntse/react-router-demo/static/js/2.5f80ad8c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.254adbab.js",
+    "static/js/2.5f80ad8c.chunk.js",
+    "static/css/main.2b0f36ae.chunk.css",
+    "static/js/main.468b34e5.chunk.js"
+  ]
+}
