@@ -14,7 +14,7 @@ function runCmd(cmd) {
 
 function build() {
 	console.log(chalk.cyan('Building App'));
-	return runCmd('npm run build');
+	return runCmd('CI=false npm run build');
 }
 function runTest() {
 	console.log(chalk.cyan('Running tests...'));
