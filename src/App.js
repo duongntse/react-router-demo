@@ -21,7 +21,7 @@ class App extends Component {
 		return (
 			<>
 				<div className='app'>
-					<h1>This is Duongntse App.</h1>
+					<h1>Updating to test out TravisCI.</h1>
 					<ServerTime />
 					<div
 						style={{
