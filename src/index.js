@@ -1,11 +1,11 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
-import { render } from 'react-snapshot';
+import ReactDOM from 'react-dom';
+// import { render } from 'react-snapshot';
 import Root from './Root';
 import './styles/index.scss';
 import * as serviceWorker from './serviceWorker';
 
-render(
+ReactDOM.render(
 	<React.StrictMode>
 		<Root />
 	</React.StrictMode>,

@@ -13,6 +13,7 @@ import About from './views/About/About';
 import Login from './views/Login/Login';
 
 import Clock from './views/Timezone/Clock';
+import ClockAnalog from './views/Timezone/ClockAnalog';
 import ServerTime from './views/ServerTime';
 
 class App extends Component {
@@ -20,7 +21,20 @@ class App extends Component {
 		return (
 			<>
 				<div className='app'>
+					<h1>This is Duongntse App.</h1>
 					<ServerTime />
+					<div
+						style={{
+							position: 'absolute',
+							right: '10px',
+							top: '10px',
+						}}>
+						<ClockAnalog
+							size={200}
+							timeFormat='24hour'
+							hourFormat='standard'
+						/>
+					</div>
 					<Clock />
 					<Router>
 						<div>

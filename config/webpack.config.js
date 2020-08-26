@@ -50,11 +50,27 @@ const cssModuleRegex = /\.module\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
 
+// const name = require('project-name');
+
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
 module.exports = function (webpackEnv) {
 	const isEnvDevelopment = webpackEnv === 'development';
 	const isEnvProduction = webpackEnv === 'production';
+	/* LOGGING */
+
+	// console.log(`project-name: ${name}`);
+	// console.log(`paths:`);
+	// console.log(`${JSON.stringify(paths)}`);
+	// console.log(
+	// 	`paths.publicUrlOrPath.startsWith: ${
+	// 		paths.publicUrlOrPath.startsWith('.')
+	// 			? JSON.stringify({ publicPath: '../../' })
+	// 			: JSON.stringify({})
+	// 	}`
+	// );
+
+	/* END LOGGING */
 
 	// Variable used for enabling profiling in Production
 	// passed into alias object. Uses a flag if passed into the build command
@@ -66,9 +82,12 @@ module.exports = function (webpackEnv) {
 	// Omit trailing slash as %PUBLIC_URL%/xyz looks better than %PUBLIC_URL%xyz.
 	// Get environment variables to inject into our app.
 	const env = getClientEnvironment(paths.publicUrlOrPath.slice(0, -1));
-	log(`webpack.config.js: env.stringified`);
-	// log(JSON.stringify(env));
-	log(env.stringified);
+	// process.env.PUBLIC_URL = '';
+	// env.PUBLIC_URL = '';
+	// log(`webpack.config.js: env.stringified`);
+	// log(env.stringified);
+	// console.log(`env.raw:`);
+	// console.log(`${JSON.stringify(env.raw)}`);
 
 	// common function to get style loaders
 	const getStyleLoaders = (cssOptions, preProcessor) => {
@@ -182,7 +201,7 @@ module.exports = function (webpackEnv) {
 			// webpack uses `publicPath` to determine where the app is being served from.
 			// It requires a trailing slash, or the file assets will get an incorrect path.
 			// We inferred the "public path" (such as / or /my-project) from homepage.
-			publicPath: paths.publicUrlOrPath,
+			// publicPath: paths.publicUrlOrPath,
 			// Point sourcemap entries to original disk location (format as URL on Windows)
 			devtoolModuleFilenameTemplate: isEnvProduction
 				? (info) =>
@@ -609,9 +628,14 @@ module.exports = function (webpackEnv) {
 			//   can be used to reconstruct the HTML if necessary
 			new ManifestPlugin({
 				fileName: 'asset-manifest.json',
-				publicPath: paths.publicUrlOrPath,
+				// publicPath: paths.publicUrlOrPath,
 				generate: (seed, files, entrypoints) => {
 					const manifestFiles = files.reduce((manifest, file) => {
+						// const projectName = name();
+						// const regex = new RegExp(`^/${projectName}`, 'gi');
+						// const regex = new RegExp(`^/${projectName}`, 'gi');
+						// manifest[file.name] = file.path.replace(regex, '');
+						// console.log(`manifest[${file.name}] = ${file.path.replace(regex, '')};`);
 						manifest[file.name] = file.path;
 						return manifest;
 					}, seed);
@@ -638,7 +662,7 @@ module.exports = function (webpackEnv) {
 					clientsClaim: true,
 					exclude: [/\.map$/, /asset-manifest\.json$/],
 					importWorkboxFrom: 'cdn',
-					navigateFallback: paths.publicUrlOrPath + 'index.html',
+					navigateFallback: 'index.html',
 					navigateFallbackBlacklist: [
 						// Exclude URLs starting with /_, as they're likely an API call
 						new RegExp('^/_'),

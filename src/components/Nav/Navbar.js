@@ -1,4 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { tryLogout } from '../../redux/actions/auth';
+
 import { Link } from 'react-router-dom';
 
 export const Navbar = ({ auth, logout, ...rest }) => {
@@ -26,4 +29,12 @@ export const Navbar = ({ auth, logout, ...rest }) => {
 	);
 };
 
-export default Navbar;
+const mapStateToProps = (state) => ({
+	auth: state.auth,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+	logout: () => dispatch(tryLogout()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

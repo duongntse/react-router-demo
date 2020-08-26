@@ -24,7 +24,7 @@ export class Clock extends Component {
 	}
 
 	render() {
-		const timezone = this.props.timezone;
+		const { timezone } = this.props;
 		const content = `${momentTz
 			.tz(timezone)
 			.format('dddd DD, MMMM, YYYY hh:mm:ss A')}`;

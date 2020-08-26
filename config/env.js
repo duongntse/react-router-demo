@@ -12,14 +12,14 @@ const { resolve, join } = path;
 // Make sure that including paths.js after env.js will read .env variables.
 delete require.cache[require.resolve('./paths')];
 
-const NODE_ENV = process.env.NODE_ENV;
+const NODE_ENV = process.env.NODE_ENV || 'development';
 if (!NODE_ENV) {
 	throw new Error(
 		'The NODE_ENV environment variable is required but was not specified.'
 	);
 }
 
-log(`NODE_ENV: ${NODE_ENV}`);
+// log(`NODE_ENV: ${NODE_ENV}`);
 
 // https://github.com/bkeepers/dotenv#what-other-env-files-can-i-use
 const dotenvFiles = [
@@ -96,8 +96,8 @@ const allVars = Object.assign(
 	envDotEnv.parsed // TIME_SERVER='https://fullstacktime.herokuapp.com'
 );
 
-log('allVars:');
-log(JSON.stringify(allVars));
+// log('allVars:');
+// log(JSON.stringify(allVars));
 // console.log(`globalDotEnv.parsed: ${JSON.stringify(globalDotEnv.parsed)}`);
 // console.log(`envDotEnv.parsed: ${JSON.stringify(envDotEnv.parsed)}`);
 
@@ -117,7 +117,7 @@ function getClientEnvironment(publicUrl) {
 				// For example, <img src={process.env.PUBLIC_URL + '/img/logo.png'} />.
 				// This should only be used as an escape hatch. Normally you would put
 				// images into the `src` and `import` them in code to get their paths.
-				PUBLIC_URL: publicUrl,
+				PUBLIC_URL: '',
 				...allVars,
 			}
 		);
