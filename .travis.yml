@@ -1,7 +1,6 @@
 language: node_js
 node_js:
     - '12.13.0'
-services: xvfb
 before_deploy:
     - 'CI=false npm run build'
 deploy:
