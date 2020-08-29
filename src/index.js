@@ -5,6 +5,14 @@ import Root from './Root';
 import './styles/index.scss';
 import * as serviceWorker from './serviceWorker';
 
+const { run } = require('react-snap');
+
+(async () =>
+	await run({
+		// You would have other args here,
+		puppeteerArgs: ['--no-sandbox', '--disable-setuid-sandbox'],
+	}))();
+
 const rootElement = document.getElementById('root');
 if (rootElement.hasChildNodes()) {
 	ReactDOM.hydrate(<Root />, rootElement);
